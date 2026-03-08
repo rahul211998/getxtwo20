@@ -52,6 +52,8 @@ class ImagePickerScreen extends StatelessWidget {
           ElevatedButton(onPressed: (){}, child: Text('click2'))
         ],
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){},
+      child: Icon(Icons.headphones_battery_sharp),),
     );
   }
 }
