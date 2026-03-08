@@ -47,7 +47,8 @@ class ImagePickerScreen extends StatelessWidget {
           Container(
             child: Text("hellos"),
           ),
-          ElevatedButton(onPressed: getImageFromPc, child: Text('click'))
+          ElevatedButton(onPressed: getImageFromPc, child: Text('click')),
+          ElevatedButton(onPressed: (){}, child: Text('click'))
         ],
       ),
     );
