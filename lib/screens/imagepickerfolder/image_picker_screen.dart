@@ -53,7 +53,7 @@ class ImagePickerScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: (){},
-      child: Icon(Icons.headphones_battery_sharp),),
+      child: Icon(Icons.headphones_battery_sharp,color: Colors.blue,),),
     );
   }
 }
