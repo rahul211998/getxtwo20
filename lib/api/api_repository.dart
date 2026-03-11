@@ -5,7 +5,9 @@ class ApiRepository {
 
 
   ApiRepository(){
-    dio = Dio(BaseOptions());
+    dio = Dio(BaseOptions(
+      baseUrl: 'https://jsonplaceholder.typicode.com'
+    ));
 
     dio.interceptors.add(InterceptorsWrapper(
       onRequest: (options, handler) {
@@ -21,8 +23,25 @@ class ApiRepository {
   }
 
 
-  Future<void> myGetApi() async{
-
+  Future<Map<String,dynamic>> myGetApi(String url) async{
+    try {
+      final getAllUsers = await dio.get(url);
+      if(getAllUsers.statusCode! >= 200){
+        return {
+          "success" : true,
+          "data" : getAllUsers.data
+        };
+      }
+      // print("getAllusers ${getAllUsers.data}");
+      // print("getAllusers ${getAllUsers.data.runtimeType}"); //List<dynamic>
+      return {
+        "nodata" : ""
+      };
+    } catch (e) {
+      return {
+        "errorapi" : e.toString()
+      };
+    }
   }
 
    static Future<Map<String,dynamic>> myPostApi(dynamic data,[String? urls]) async{
