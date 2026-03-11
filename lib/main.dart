@@ -16,6 +16,7 @@ void main() async {
 );
 
 print("🔥 Firebase Project ID: ${app.options.projectId}");
+  print("best");
   runApp(const MyApp());
 }
 
