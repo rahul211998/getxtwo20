@@ -34,6 +34,10 @@ class MyApp extends StatelessWidget {
     print("51");
   }
 
+    void mains(){
+    print("mainsss");
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
