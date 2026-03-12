@@ -25,6 +25,15 @@ print("🔥 Firebase Project ID: ${app.options.projectId}");
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  void names(){
+    print("best names");
+  }
+
+
+  void age(){
+    print("51");
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
