@@ -18,7 +18,6 @@ void main() async {
 print("🔥 Firebase Project ID: ${app.options.projectId}");
   print("best");
   print("best github");
-  int ts = 100;
   runApp(const MyApp());
 }
 
